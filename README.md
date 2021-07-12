@@ -1,7 +1,15 @@
 Temática:
-Mercado online de frutas y verduras
-
+Mercado online de frutas y verdura
 Enlace del Tablero de trabajo en trello: https://trello.com/b/4Y5KhZ9u/verdu-market
+
+::::::::::::::::::Entregables Sprint 6::::::::::::::::::::::::
+Estructura de la BD :    /temp/structure.sql
+Estructura BD en PDF:    /temp/structure.PDF
+Datos necesarios    :    /temp/data.sql
+Retrospectiva       :    /temp/retro.md
+Weekly              :    /temp/weekly.md
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ¿Qué productos o servicios brindará nuestro sitio?
 - Artículos de verdulería
@@ -33,3 +41,7 @@ https://uiwimarket.com/
 https://www.estacionvegetal.com.ar/
 https://greenshop.com.ar/
 http://www.laverduleriaonline.com/
+
+
+
+
