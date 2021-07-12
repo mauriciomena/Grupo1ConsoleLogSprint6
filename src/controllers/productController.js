@@ -68,15 +68,14 @@ module.exports = {
         db.Image.create ({
           name       :  req.file.filename,
           products_id:  data.id } )
-      })
+          res.redirect('/products');
+      }
+      )
       .catch((err)=>{
         res.send(err);
       })
 
-    let products = db.Product.findAll({
-     include: [{ association: "categories" }],
-     });
-   res.redirect('/products');
+   
   },
 
   productCreate: (req, res) => {
@@ -146,12 +145,18 @@ module.exports = {
     
     res.redirect("/products/" + req.params.id); },
 
-  productDelete: (req, res) => {
-    db.Product.destroy({
-      where: {
-        id: req.params.id,
-      },
-    });
-    res.redirect("/products");
-  }
+  productDelete:  (req, res) => {
+    
+      db.Image.destroy({where: {products_id: req.params.id,}})
+      .then(()=>{
+        db.Product.destroy({
+          where: {
+            id: req.params.id,
+          },
+        });
+      })
+      .catch((error)=>{
+        res.send(error);
+      }); 
+    }
 };
